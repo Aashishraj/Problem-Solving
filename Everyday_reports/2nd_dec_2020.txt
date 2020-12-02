@@ -1,0 +1,57 @@
+Only positive comments 
+Be affermative
+Aashish Raj became the world best problem solver in year March 2021.  
+I am Awesome.
+I am the fastest human to think most efficient and correct solution of a problem.
+Aashish Raj is the Sherlock Holmes of problem solving 
+Aashish Raj is the best.
+
+1. Introduction of the day:
+  Today I gave enough rest to my mind as I slept for more than 10 hours and gave 4 hours to problem solving.
+
+2. Problems solved:
+  a. Consecutive XORS ( https://codeforces.com/contest/1457/problem/D )
+  
+    Problem statement:
+      An array is given having values in non-decreasing order, 
+      do XOR operations on pair of the consequtive elements of the array so that it is no longer in non-decreasing order.
+      The size of the array will decrease as we do more xor operations 
+      as instead of two nos we are having one ie a xor b = c and c will be now the part of the array instead of a and b.
+      Find the minimum no of xor operations needed to do it.
+    
+    Intutions and Ideas:
+      1. If three consequtive nos are having same msb (1st bit from left when converted to binary) 
+        then if we do xor of last two nos then it will be less than the first one.
+        If it exists then the answer will be 1.
+      2. if not 1 then we will apply brute force approach to find the answer, 
+        let us assume that we find the answer from left segment ci and ci+1, i.e ci > ci+1 ,
+        then for computing ci we needed some elements of the array aL,aL+1,......,am and
+        for ci+1 the elements be: am+1,am+2,.......,ar;
+        So we find that L,m,r which satisfy this and the 
+        no of XOR operations= r-(m+1) + m- L = r - L - 1;  
+    
+    Code:
+      https://codeforces.com/contest/1457/submission/100117096
+    
+    Resloved errors:
+      Minimum elements in ci can be 1 but I started calculating m from l+1 so according to this 2 elements was minimum.
+      
+    Doubts:
+      How O(n^3) and O(n^4) solution is working as n is 1e5.
+  
+3. New Things learned:
+  a. Considering the MSB for determining the xor results
+  b. Learned how to use brute force ( I know it but this is different)
+     i. First we find what is the result we need inorder to find the answer (like ci > ci+1)
+     ii. we need to find that how those conditions can be achieved ( like how to compute ci and ci+1)
+     iii. Now all possible combinations of step ii. to find the answer
+     
+4. Things to be more concerned about:
+  a. Mathematical deduction of the problem
+  b. Think Think
+
+5. Improvements from yesterday:
+  More focoused 
+  Approach improved more mathematical now
+  
+
